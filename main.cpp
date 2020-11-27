@@ -51,6 +51,9 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lp
 	if( FAILED(Hr) ) return 0;
 	/*结束init相关操作*/
 
+	CDuiFrameWnd duiFrame;
+	duiFrame.Create(NULL, _T("chinaunicom"), UI_WNDSTYLE_FRAME, WS_EX_WINDOWEDGE);
+	duiFrame.ShowModal();
 	
 	/*开始exit操作*/
 	CPaintManagerUI::MessageLoop();
